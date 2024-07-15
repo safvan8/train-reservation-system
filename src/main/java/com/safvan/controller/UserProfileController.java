@@ -2,6 +2,7 @@ package com.safvan.controller;
 
 import java.util.Base64;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.servlet.http.HttpSession;
 
@@ -51,7 +52,7 @@ public class UserProfileController {
 			user = loginManagementService.getUserbySessionId(sessionId);
 		}
 
-		if (sessionId != null && user != null) {
+		if (Objects.nonNull(sessionId) && Objects.nonNull(user)) {
 			model.put("user", user);
 			byte[] imageByteArray = user.getUserProfile().getImage();
 			/*
@@ -59,7 +60,11 @@ public class UserProfileController {
 			 * here we are converting the image byte array to Base64 encoding before passing
 			 * it to the view.
 			 */
-			model.put("userImage", Base64.getEncoder().encodeToString(imageByteArray));
+			if (Objects.nonNull(imageByteArray)) {
+				model.put("userImage", Base64.getEncoder().encodeToString(imageByteArray));
+			}
+			// If imageByteArray is null or empty, no action needed to add "userImage" to
+			// model
 		}
 		return "display_profile";
 	}
