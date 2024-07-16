@@ -1,0 +1,89 @@
+
+body {
+    background-image: url('../images/background.jpg');
+    /* Additional styles for the background */
+    background-size: cover;
+    background-position: center;
+    /* Other background properties as needed */
+}
+.main-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 95vh;
+}
+
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #EEEEEE;
+	padding: 32px;
+	border-radius: 16px;
+	opacity: 0.95;
+}
+
+.main-text{
+	font-size: 24px;
+	line-height:12px;
+	font-family: monospace;
+}
+.form-container{
+	padding: 24px;
+}
+
+.input{
+	padding: 12px;
+	border-radius: 8px;
+	border:none;
+    width:250px;
+    margin-top:16px;
+    opacity:1;
+}
+.form{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 20px;
+}
+
+.text{
+	font-size: 16px;
+	margin-top: 16px;
+	padding:4px;
+}
+
+.button{
+	padding: 12px;
+	margin-top: 20px;
+	border-radius: 8px;
+	border:none;
+	background-color: #DC5F00;
+	color:#EEEEEE
+}
+.left-container{
+	
+}
+.heading{
+	
+}
+
+.register-container{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid;
+	border-color: #DC5F00;
+	border-radius: 8px;
+	display:flex;
+	justify-content:center;
+	width: 45%;
+}
+
+.register{
+	text-decoration: none;
+	color: #DC5F00;
+	font-size: 14px;
+	font-family: monospace;
+}
