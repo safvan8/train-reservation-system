@@ -84,5 +84,5 @@ These technologies are carefully selected to provide a robust, efficient, and us
 
 ## Screenshots
 
-### Home Page
-![Home Page](images/1.login-page.png)
+### LoginPage
+![Login Page](images/1.login-page.png)
