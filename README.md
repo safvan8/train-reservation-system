@@ -81,3 +81,31 @@ Users of the system have the following access and functionalities:
 - Embedded Apache Tomcat Server
   
 These technologies are carefully selected to provide a robust, efficient, and user-friendly solution for the Train Ticket Reservation System.
+
+## Screenshots
+
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+
+### 2-New User Registration Form
+![New User Registration Form](images/2.UserRegistartionForm.png)
+
+### 3- Check All Available Trains By User
+![Check All Available Trains By User](images/3-user-view-apptrains.png)
+
+### 4- Train Booking
+![Train Booking](images/4-proceeding-withBooking.png)
+
+### 5- Payment Gateway Before Booking
+![Payement](images/5-payment-gateWay.png)
+
+### 6- User Booked Tickets SuccesFully
+![Booing Suceess](images/6.TicketSucccess.png)
+
+### 7- Train Booking History and User Profile
+![HistoryProfile](images/7-BokingHistory-And-Profile.png)
+
+### 8- Admin Logged In
+![Admin](images/9-admin-loggedIn.png)
+
+### Note: Similar to the user, if an admin registers with the role "ADMIN," they will also have access to all the features mentioned above.
