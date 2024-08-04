@@ -102,7 +102,10 @@ public class UserController {
 	 */
 	@GetMapping(value = { UserEndpoints.SHOW_FIND_TRAINS_BETWEEN_TWO_STATIONS_FORM,
 			UserEndpoints.SHOW_TRAIN_FAIR_ENQUERY_FORM })
-	public String findTrainsbetweenStaionsForward(Map<String, Object> model, HttpServletRequest request) {
+	public String findTrainsbetweenStaionsForward
+			(Map<String, Object> model, 
+			HttpServletRequest request) {
+		
 		System.out.println(request.getRequestURI());
 
 		String pageHeading;
@@ -138,7 +141,9 @@ public class UserController {
 	 * @return The view name for displaying the trains between stations.
 	 */
 	@GetMapping(UserEndpoints.FIND_TRAINS_BETWEEN_TWO_STATIONS_RESULT)
-	public String findTrainsbetweenStaions(@RequestParam String fromStation, @RequestParam String toStation,
+	public String findTrainsbetweenStaions(
+			@RequestParam String fromStation, 
+			@RequestParam String toStation,
 			Map<String, Object> model) {
 
 		// Retrieve the list of trains between the specified stations
@@ -170,8 +175,12 @@ public class UserController {
 	 * @return The view name for the pre-booking form.
 	 */
 	@GetMapping(UserEndpoints.SHOW_TRAIN_PRE_BOOKING_FORM)
-	public String showPreBookingFormForTrain(@RequestParam Long trainNo, @RequestParam String fromStation,
-			@RequestParam String toStation, HttpSession session, Map<String, Object> model) {
+	public String showPreBookingFormForTrain(
+			@RequestParam Long trainNo, 
+			@RequestParam String fromStation,
+			@RequestParam String toStation,
+			HttpSession session,
+			Map<String, Object> model) {
 
 		System.out.println("UserController.showPreBookingFormForTrain()+ " + trainNo);
 
@@ -212,8 +221,12 @@ public class UserController {
 	 * @return The view name for the payment inputs form.
 	 */
 	@PostMapping(UserEndpoints.PROCEED_TRAIN_BOOKING)
-	public String proceedTrainBookingForUser(@ModelAttribute TicketDTO ticketDTO, @RequestParam Long trainNo,
-			@RequestParam String fromStation, @RequestParam String toStation, Map<String, Object> model) {
+	public String proceedTrainBookingForUser(
+			@ModelAttribute TicketDTO ticketDTO, 
+			@RequestParam Long trainNo,
+			@RequestParam String fromStation, 
+			@RequestParam String toStation, 
+			Map<String, Object> model) {
 
 		// Create a TrainDTO object and set the train number,
 		// from station, and to station
@@ -248,8 +261,11 @@ public class UserController {
 	 * 
 	 */
 	@PostMapping(UserEndpoints.CONFIRM_TRAIN_BOOKING)
-	public String confirmTrainBooking(@ModelAttribute("trainDTO") TrainDTO trainDTO,
-			@ModelAttribute("ticketDTO") TicketDTO ticketDTO, HttpSession session, Map<String, Object> model) {
+	public String confirmTrainBooking(
+			@ModelAttribute("trainDTO") TrainDTO trainDTO,
+			@ModelAttribute("ticketDTO") TicketDTO ticketDTO, 
+			HttpSession session, 
+			Map<String, Object> model) {
 
 		// Create new Train and Ticket objects and copy property values from TrainDTO
 		// and TicketDTO
@@ -287,7 +303,10 @@ public class UserController {
 	 * @return the view name for displaying the ticket booking history.
 	 */
 	@GetMapping(UserEndpoints.SHOW_TICKET_BOOKING_HISTORY)
-	public String getAllTicketsBooked(HttpSession session, Map<String, Object> model) {
+	public String getAllTicketsBooked(
+			HttpSession session, 
+			Map<String, 
+			Object> model) {
 
 		// Retrieve user details of logged in user using sessionId.
 		String sessionId = session.getAttribute("sessionId").toString();
@@ -317,9 +336,13 @@ public class UserController {
 	 * 
 	 * @return The view name for the train number input form.
 	 */
-	@GetMapping(value = { UserEndpoints.SHOW_TRAIN_SEATS_AVAILABILITY_CHECK_FORM,
-			UserEndpoints.SHOW_SEARCH_TRAIN_BY_NUMBER_FORM })
-	public String showTrainNumberinputForm(HttpServletRequest request, Map<String, Object> model) {
+	@GetMapping(value = { 
+			UserEndpoints.SHOW_TRAIN_SEATS_AVAILABILITY_CHECK_FORM,
+			UserEndpoints.SHOW_SEARCH_TRAIN_BY_NUMBER_FORM }
+	)
+	public String showTrainNumberinputForm(
+			HttpServletRequest request, 
+			Map<String, Object> model) {
 
 		String pageHeading;
 		String submitButtonValue;
@@ -351,7 +374,10 @@ public class UserController {
 	 * @throws ApiTrainNotFoundException If the train is not found.
 	 */
 	@GetMapping(UserEndpoints.SEARCH_TRAIN_BY_NUMBER_RESULT)
-	public String searchTrainByNumber(@RequestParam Long trainNo, Map<String, Object> model) {
+	public String searchTrainByNumber(
+			@RequestParam Long trainNo, 
+			Map<String, 
+			Object> model) {
 
 		// retrive train details based on train number
 		Train train = trainService.getTrainByNumber(trainNo);

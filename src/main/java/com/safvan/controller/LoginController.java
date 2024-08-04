@@ -50,7 +50,10 @@ public class LoginController {
 	 * @return The view name based on the login result.
 	 */
 	@PostMapping(LoginEndpoints.LOGIN)
-	public String login(@RequestParam String username, @RequestParam String password, HttpSession session,
+	public String login(
+			@RequestParam String username, 
+			@RequestParam String password, 
+			HttpSession session,
 			Map<String, Object> model) {
 
 		// passing user ented username ,and password for authentication.
@@ -113,7 +116,10 @@ public class LoginController {
 	 * @return The view name for the login page.
 	 */
 	@RequestMapping(LoginEndpoints.LOGOUT)
-	public String logout(HttpSession session, Map<String, Object> model) {
+	public String logout(
+			HttpSession session, 
+			Map<String, 
+			Object> model) {
 		// setting logout message.
 		model.put("logoutMessage", "Logout Success, Login again below if needed");
 
