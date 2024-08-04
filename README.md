@@ -1,4 +1,16 @@
 # Train Ticket Reservation System
+
+[![Java](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.13-green)](https://spring.io/projects/spring-boot)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)](https://www.mysql.com/)
+[![Maven](https://img.shields.io/badge/Maven-3.8.4-red)](https://maven.apache.org/)
+[![Tomcat](https://img.shields.io/badge/Tomcat-9.0-orange)](https://tomcat.apache.org/)
+[![Log4j2](https://img.shields.io/badge/Log4j2-2.20.0-yellow)](https://logging.apache.org/log4j/2.x/)
+[![JSP](https://img.shields.io/badge/JSP-2.3-blue)](https://www.oracle.com/java/technologies/java-server-pages.html)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-purple)](https://getbootstrap.com/)
+
+**Version:** v3.0.0
+
 **About:**
 
 The Train Ticket Reservation System is a web application with a Rest API  designed to provide various functionalities related to train ticket booking and information. It allows users to view train schedules, search for trains, check seat availability, obtain train timings, and inquire about fare details. The system also facilitates booking seats online, ensuring a secure and convenient reservation process.
