@@ -37,7 +37,9 @@ public interface IUserRepository extends CrudRepository<User, Integer> {
 	 * @param password the password of the user
 	 * @return the user with the specified username and password
 	 */
-	public User findByUsernameAndPassword(String username, String password);
+	public User findByUsernameAndPassword(
+			String username, 
+			String password);
 
 	/**
 	 * Update the session ID for a user.
@@ -48,7 +50,9 @@ public interface IUserRepository extends CrudRepository<User, Integer> {
 	@Transactional
 	@Modifying
 	@Query("UPDATE com.safvan.beans.User SET sessionId=:sessionId WHERE userId=:userId")
-	public void updateSessionIdByUserId(Integer userId, String sessionId);
+	public void updateSessionIdByUserId(
+			Integer userId, 
+			String sessionId);
 
 	/**
 	 * Find a user by session ID.

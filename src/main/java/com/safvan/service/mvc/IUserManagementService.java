@@ -20,7 +20,8 @@ public interface IUserManagementService {
 	 * @return The User object representing the user.
 	 * @throws ApiUserNotFoundException If the user is not found with the given ID.
 	 */
-	public User getUserById(Integer userId) throws UserNotFoundException;
+	public User getUserById(Integer userId) 
+			throws UserNotFoundException;
 
 	/**
 	 * Registers a new customer by saving the user object to the database.

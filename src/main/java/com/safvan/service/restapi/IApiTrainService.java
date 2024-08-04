@@ -33,7 +33,8 @@ public interface IApiTrainService {
 	 * @throws ApiTrainNotFoundException If the train with the specified number is
 	 *                                   not found.
 	 */
-	public Train getTrainByNumber(Long trainNo) throws ApiTrainNotFoundException;
+	public Train getTrainByNumber(Long trainNo) 
+			throws ApiTrainNotFoundException;
 
 	/**
 	 * Finds trains between the specified source and destination stations.
@@ -43,5 +44,7 @@ public interface IApiTrainService {
 	 * @return A list of Train objects representing the trains between the specified
 	 *         stations.
 	 */
-	public List<Train> getTrainsBetweenStations(String fromStation, String toStation);
+	public List<Train> getTrainsBetweenStations(
+			String fromStation, 
+			String toStation);
 }

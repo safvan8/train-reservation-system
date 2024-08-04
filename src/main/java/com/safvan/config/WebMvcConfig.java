@@ -43,6 +43,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		 * they reach the controller, providing session management and security
 		 * functionality.
 		 */
-		registry.addInterceptor(new SessionInterceptor()).addPathPatterns("/admin/**", "/user/**", "/userProfile/**");
+		registry.addInterceptor(
+				new SessionInterceptor())
+					.addPathPatterns("/admin/**", "/user/**", "/userProfile/**");
 	}
 }

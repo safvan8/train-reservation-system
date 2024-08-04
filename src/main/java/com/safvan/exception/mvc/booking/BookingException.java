@@ -10,7 +10,9 @@ public class BookingException extends RuntimeException {
 	private StackTraceElement[] stackTrace;
 	private String userFriendlyMessage;
 
-	public BookingException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public BookingException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(userFriendlyMessage);
 		this.stackTrace = stackTrace;
 		this.userFriendlyMessage = userFriendlyMessage;

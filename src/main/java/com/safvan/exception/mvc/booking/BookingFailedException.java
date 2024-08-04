@@ -5,7 +5,11 @@ import lombok.Data;
 @Data
 public class BookingFailedException extends BookingException {
 
-	public BookingFailedException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	private static final long serialVersionUID = 1L;
+
+	public BookingFailedException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(stackTrace, userFriendlyMessage);
 	}
 }

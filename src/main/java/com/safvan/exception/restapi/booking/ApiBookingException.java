@@ -16,7 +16,9 @@ public class ApiBookingException extends RuntimeException {
 	private StackTraceElement[] stackTrace;
 	private String userFriendlyMessage;
 
-	public ApiBookingException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public ApiBookingException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(userFriendlyMessage);
 		this.stackTrace = stackTrace;
 		this.userFriendlyMessage = userFriendlyMessage;

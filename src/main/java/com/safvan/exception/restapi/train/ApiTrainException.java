@@ -20,7 +20,10 @@ public class ApiTrainException extends RuntimeException {
 	private StackTraceElement[] stackTrace;
 	private String userFriendlyMessage;
 
-	public ApiTrainException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public ApiTrainException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
+		
 		super(stackTrace.toString());
 		this.stackTrace = stackTrace;
 		this.userFriendlyMessage = userFriendlyMessage;

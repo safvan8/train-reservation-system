@@ -60,7 +60,10 @@ public class StandAloneGlobalExceptionHandler {
 	 * @return The viewPage to display the error message.
 	 */
 	@ExceptionHandler(TrainNotFoundException.class)
-	public String handleTrainNotFoundException(TrainNotFoundException e, HttpServletRequest request, Model model) {
+	public String handleTrainNotFoundException(
+			TrainNotFoundException e,
+			HttpServletRequest request, 
+			Model model) {
 
 		System.out.println("StandAloneGlobalExceptionHandler.handleTrainNotFoundException(************************)");
 
@@ -102,7 +105,10 @@ public class StandAloneGlobalExceptionHandler {
 	 */
 
 	@ExceptionHandler(TrainException.class)
-	public String handleTrainException(TrainException e, HttpServletRequest request, Model model) {
+	public String handleTrainException(
+			TrainException e,
+			HttpServletRequest request, 
+			Model model) {
 		// Logging the exception
 		ExceptionLoggerUtil.logException(e, request.getRequestURI());
 		String message = e.getUserFriendlyMessage();
@@ -120,8 +126,15 @@ public class StandAloneGlobalExceptionHandler {
 	 * @return The view name to display the error message for user-related booking
 	 *         exceptions.
 	 */
-	@ExceptionHandler(value = { BookingException.class, NoEnoughSeatsForBooking.class, BookingFailedException.class })
-	public String handleNoEnoughSeatsForBooking(BookingException e, HttpServletRequest request, Model model) {
+	@ExceptionHandler(value = { 
+			BookingException.class, 
+			NoEnoughSeatsForBooking.class, 
+			BookingFailedException.class 
+			})
+	public String handleNoEnoughSeatsForBooking(
+			BookingException e,
+			HttpServletRequest request, 
+			Model model) {
 
 		e.printStackTrace();
 
@@ -143,8 +156,14 @@ public class StandAloneGlobalExceptionHandler {
 	 * @return The view name to display the error message based on the user's role
 	 *         or the type of login-related exception raised.
 	 */
-	@ExceptionHandler(value = { LoginFailedException.class, UserNotFoundException.class })
-	public String handleLonginRelatedExceptions(LoginFailedException e, HttpServletRequest request, Model model) {
+	@ExceptionHandler(
+			value = { LoginFailedException.class, 
+					UserNotFoundException.class 
+				})
+	public String handleLonginRelatedExceptions(
+			LoginFailedException e, 
+			HttpServletRequest request, 
+			Model model) {
 		// Logging exception
 		ExceptionLoggerUtil.logException(e, request.getRequestURI());
 

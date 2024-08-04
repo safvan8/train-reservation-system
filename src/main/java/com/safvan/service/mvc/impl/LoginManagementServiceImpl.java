@@ -39,7 +39,9 @@ public class LoginManagementServiceImpl implements ILoginManagementService {
 	 * @return The User object representing the authenticated user.
 	 */
 	@Override
-	public User authenticateUser(String username, String plainPassword) {
+	public User authenticateUser(
+			String username, 
+			String plainPassword) {
 
 		User userFromDB = userRepository.findByUsername(username);
 
@@ -60,7 +62,10 @@ public class LoginManagementServiceImpl implements ILoginManagementService {
 	 * @throws ApiUserNotFoundException If the user is not found for the given ID.
 	 */
 	@Override
-	public void storeUserSession(Integer userId, String sessionId) {
+	public void storeUserSession(
+			Integer userId, 
+			String sessionId) {
+		
 		User user = userManagementService.getUserById(userId);
 		
 		// if user is not null,
@@ -105,7 +110,9 @@ public class LoginManagementServiceImpl implements ILoginManagementService {
 	 *         otherwise.
 	 */
 	@Override
-	public boolean isPasswordHashMatching(String plainPassword, String hashedPassword) {
+	public boolean isPasswordHashMatching(
+			String plainPassword, 
+			String hashedPassword) {
 
 		return passwordEncoder.matches(plainPassword, hashedPassword);
 	}

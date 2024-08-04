@@ -6,6 +6,8 @@ import com.safvan.beans.Ticket;
 import com.safvan.beans.User;
 import com.safvan.exception.mvc.booking.BookingFailedException;
 import com.safvan.exception.mvc.booking.NoEnoughSeatsForBooking;
+import com.safvan.exception.restapi.booking.ApiBookingFailedException;
+import com.safvan.exception.restapi.booking.ApiNoEnoughSeatsForBooking;
 
 /**
  * The IBookingService interface provides methods for booking tickets and
@@ -27,7 +29,8 @@ public interface IBookingService {
 	 *                                 the train for booking.
 	 * @throws ApiBookingFailedException  If an error occurs while booking the ticket.
 	 */
-	public Ticket bookTicket(Ticket ticket) throws NoEnoughSeatsForBooking, BookingFailedException;
+	public Ticket bookTicket(Ticket ticket) 
+			throws NoEnoughSeatsForBooking, BookingFailedException;
 	
 
 	/**

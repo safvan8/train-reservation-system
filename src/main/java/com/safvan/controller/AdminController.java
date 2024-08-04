@@ -81,7 +81,9 @@ public class AdminController {
 	 * @throws ApiTrainNotFoundException If the train is not found.
 	 */
 	@GetMapping(AdminEndpoints.SHOW_SEARCH_TRAIN_BY_NUMBER_RESULT)
-	public String searchTrainByNumberResult(@RequestParam Long trainNo, Map<String, Object> model) {
+	public String searchTrainByNumberResult(
+			@RequestParam Long trainNo, 
+			Map<String, Object> model) {
 		Train train = trainService.getTrainByNumber(trainNo);
 
 		model.put("train", train);
@@ -114,7 +116,9 @@ public class AdminController {
 	 *                           train.
 	 */
 	@PostMapping(AdminEndpoints.SAVE_OR_UPDATE_TRAIN)
-	public String saveOrUpdateTrain(@ModelAttribute Train train, Map<String, Object> model) {
+	public String saveOrUpdateTrain(
+			@ModelAttribute Train train, 
+			Map<String, Object> model) {
 
 		String message = trainService.saveOrUpdateTrain(train);
 
@@ -147,7 +151,10 @@ public class AdminController {
 	 * @throws ApiTrainNotFoundException If the train is not found.
 	 */
 	@PostMapping(AdminEndpoints.SHOW_TRAIN_EDIT_FORM_TO_UPDATE_BY_NUMBER)
-	public String showEditForm(@RequestParam Long trainNo, Map<String, Object> model) {
+	public String showEditForm(
+			@RequestParam Long trainNo, 
+			Map<String, 
+			Object> model) {
 
 		Train train = trainService.getTrainByNumber(trainNo);
 
@@ -181,7 +188,10 @@ public class AdminController {
 	 *                                   train.
 	 */
 	@PostMapping(AdminEndpoints.DELETE_TRAIN_BY_NUMBER)
-	public String deleteTrain(@RequestParam Long trainNo, Map<String, Object> model) {
+	public String deleteTrain(
+			@RequestParam Long trainNo, 
+			Map<String, 
+			Object> model) {
 
 		String message = trainService.deleteTrain(trainNo);
 

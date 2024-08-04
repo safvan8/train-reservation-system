@@ -36,8 +36,15 @@ public class UserUtils {
 	 * @param imageBytes  The byte array representing the user's profile image.
 	 * @return The created User object.
 	 */
-	public static User createUser(String username, String password, String firstName, String lastName, String address,
-			String phoneNumber, byte[] imageBytes) {
+	public static User createUser(
+			String username, 
+			String password, 
+			String firstName, 
+			String lastName,
+			String address,
+			String phoneNumber,
+			byte[] imageBytes) {
+		
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);

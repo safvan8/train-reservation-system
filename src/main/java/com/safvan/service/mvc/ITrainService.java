@@ -5,6 +5,8 @@ import java.util.List;
 import com.safvan.beans.Train;
 import com.safvan.exception.mvc.train.TrainException;
 import com.safvan.exception.mvc.train.TrainNotFoundException;
+import com.safvan.exception.restapi.train.ApiTrainException;
+import com.safvan.exception.restapi.train.ApiTrainNotFoundException;
 
 /**
  * The IApiTrainService interface defines the contract for performing operations
@@ -34,7 +36,8 @@ public interface ITrainService {
 	 * @throws ApiTrainNotFoundException If the train with the specified number is not
 	 *                                found.
 	 */
-	public Train getTrainByNumber(Long trainNo) throws TrainNotFoundException;
+	public Train getTrainByNumber(Long trainNo) 
+			throws TrainNotFoundException;
 
 	/**
 	 * Saves or updates the details of a train.
@@ -44,7 +47,8 @@ public interface ITrainService {
 	 * @return A message indicating the status of the operation.
 	 * @throws ApiTrainException If an error occurs while saving or updating the train.
 	 */
-	public String saveOrUpdateTrain(Train train) throws TrainException;
+	public String saveOrUpdateTrain(Train train) 
+			throws TrainException;
 
 	/**
 	 * Deletes a train based on the train number.
@@ -54,7 +58,8 @@ public interface ITrainService {
 	 * @throws ApiTrainNotFoundException If the train with the specified number is not
 	 *                                found.
 	 */
-	public String deleteTrain(Long trainNo) throws TrainNotFoundException;
+	public String deleteTrain(Long trainNo) 
+			throws TrainNotFoundException;
 
 	/**
 	 * Finds trains between the specified source and destination stations.
@@ -64,5 +69,7 @@ public interface ITrainService {
 	 * @return A list of Train objects representing the trains between the specified
 	 *         stations.
 	 */
-	public List<Train> getTrainsBetweenStations(String fromStation, String toStation);
+	public List<Train> getTrainsBetweenStations(
+			String fromStation, 
+			String toStation);
 }

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.safvan.beans.Train;
 import com.safvan.exception.mvc.train.TrainException;
 import com.safvan.exception.mvc.train.TrainNotFoundException;
+import com.safvan.exception.restapi.train.ApiTrainException;
+import com.safvan.exception.restapi.train.ApiTrainNotFoundException;
 import com.safvan.repository.mvc.ITrainRepository;
 import com.safvan.service.mvc.ITrainService;
 
@@ -42,7 +44,6 @@ public class TrainServiceImpl implements ITrainService {
 	 */
 	@Override
 	public List<Train> getAllTrains() {
-		System.out.println("ApiTrainServiceImpl.getAllTrains()");
 		return (List<Train>) trainRepository.findAll();
 	}
 
@@ -56,7 +57,6 @@ public class TrainServiceImpl implements ITrainService {
 	@Override
 	public Train getTrainByNumber(Long trainNo) {
 		Optional<Train> train = trainRepository.findById(trainNo);
-		System.out.println("ApiTrainServiceImpl.getTrainByNumber()");
 		if (train.isPresent())
 			return train.get();
 		// throwing execption if train not found
@@ -96,7 +96,8 @@ public class TrainServiceImpl implements ITrainService {
 	 * @throws ApiTrainException         If an error occurs while deleting the train.
 	 */
 	@Override
-	public String deleteTrain(Long trainNo) throws TrainNotFoundException {
+	public String deleteTrain(Long trainNo) 
+			throws TrainNotFoundException {
 
 		String userFriendlyMessage = null;
 
@@ -120,7 +121,9 @@ public class TrainServiceImpl implements ITrainService {
 	 * @return List of trains between the specified stations.
 	 */
 	@Override
-	public List<Train> getTrainsBetweenStations(String fromStation, String toStation) {
+	public List<Train> getTrainsBetweenStations(
+			String fromStation, 
+			String toStation) {
 
 		return trainRepository.findTrainsBetweenStations(fromStation, toStation);
 	}

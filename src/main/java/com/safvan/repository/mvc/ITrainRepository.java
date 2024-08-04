@@ -29,6 +29,12 @@ public interface ITrainRepository extends PagingAndSortingRepository<Train, Long
 	 * @param toStation   the destination station
 	 * @return a list of trains that match the given criteria
 	 */
-	@Query("FROM com.safvan.beans.Train WHERE ( UPPER(fromStation)=UPPER(:from) AND UPPER(toStation)=UPPER(:to)) OR (UPPER(fromStation)=UPPER(:to) AND UPPER(toStation)=UPPER(:from))")
-	public List<Train> findTrainsBetweenStations(@Param("from") String fromStation, @Param("to") String toStation);
+	@Query("FROM com.safvan.beans.Train "
+			+ "WHERE ( UPPER(fromStation)=UPPER(:from) "
+			+ "AND UPPER(toStation)=UPPER(:to)) "
+			+ "OR (UPPER(fromStation)=UPPER(:to) "
+			+ "AND UPPER(toStation)=UPPER(:from))")
+	public List<Train> findTrainsBetweenStations(
+			@Param("from") String fromStation, 
+			@Param("to") String toStation);
 }

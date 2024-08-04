@@ -5,7 +5,11 @@ import lombok.Data;
 @Data
 public class NoEnoughSeatsForBooking extends BookingException {
 
-	public NoEnoughSeatsForBooking(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	private static final long serialVersionUID = 1L;
+
+	public NoEnoughSeatsForBooking(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(stackTrace, userFriendlyMessage);
 	}
 }

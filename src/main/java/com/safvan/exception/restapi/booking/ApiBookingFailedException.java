@@ -11,7 +11,9 @@ import lombok.Data;
 @Data
 public class ApiBookingFailedException extends ApiBookingException {
 
-	public ApiBookingFailedException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public ApiBookingFailedException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(stackTrace, userFriendlyMessage);
 	}
 }

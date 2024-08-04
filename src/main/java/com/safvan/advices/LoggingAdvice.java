@@ -69,7 +69,9 @@ public class LoggingAdvice {
 	 * @param result    the result
 	 */
 	@AfterReturning(pointcut = "execution(* com.safvan..*(..)) && !within(com.safvan.advices.LoggingAdvice) ", returning = "result")
-	public void logMethodExit(JoinPoint joinPoint, Object result) {
+	public void logMethodExit(
+			JoinPoint joinPoint, 
+			Object result) {
 		String methodName = joinPoint.getSignature().getName();
 		String className = joinPoint.getTarget().getClass().getName();
 		LOGGER.debug("Exiting method: {}.{}", className, methodName);
@@ -83,7 +85,9 @@ public class LoggingAdvice {
 	 * @param ex        the ex
 	 */
 	@AfterThrowing(pointcut = "execution(* com.safvan..*(..)) && !within(com.safvan.advices.LoggingAdvice)", throwing = "ex")
-	public void logMethodException(JoinPoint joinPoint, Exception ex) {
+	public void logMethodException(
+			JoinPoint joinPoint, 
+			Exception ex) {
 		String methodName = joinPoint.getSignature().getName();
 		String className = joinPoint.getTarget().getClass().getName();
 		LOGGER.error("Exception in method: {}.{}", className, methodName);
