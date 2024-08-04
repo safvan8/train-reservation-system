@@ -91,17 +91,20 @@ These technologies are carefully selected to provide a robust, efficient, and us
 ![New User Registration Form](images/2.UserRegistartionForm.png)
 
 ### 3- Check All Available Trains By User
-![Check All Available Trains By User](images/3-user-view-apptrains)
+![Check All Available Trains By User](images/3-user-view-apptrains.png)
 
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
-### 1-LoginPage
-![Login Page](images/1.login-page.png)
+### 4- Train Booking
+![Train Booking](images/4-proceeding-withBooking.png)
+
+### 5- Payment Gateway Before Booking
+![Payement](images/5-payment-gateWay.png)
+
+### 6- User Booked Tickets SuccesFully
+![Booing Suceess](images/6.TicketSucccess.png)
+
+### 7- Train Booking History and User Profile
+![HistoryProfile](images/7-BokingHistory-And-Profile)
+
+### 8- Admin Add Train View
+![Login Page](images/9-Admin-Features- ad-train- and other.png)
+
