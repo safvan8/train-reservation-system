@@ -54,6 +54,19 @@ body {
     padding: 5px;
     margin-top: 6px;
 }
+.center-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 15px auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 165px;
+    background-color: lightcyan;
+}
 
 .tab {
     border: 1px black solid;

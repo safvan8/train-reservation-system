@@ -76,7 +76,7 @@
         </header>
 
         <div class="main">
-            <p class="menu"> Add New Train Form</p>
+            <p class="center-heading"> Add New Train Form</p>
         </div>
 
         <!-- Form to add new train-->

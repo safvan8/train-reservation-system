@@ -85,7 +85,7 @@
 
 	<!-- To display all trains details received from DB -->
 	<div class="main">
-		<p class="menu">${pageHeading}</p>
+		<p class="center-heading">${pageHeading}</p>
 		<div class="tab">
 			<table border="1">
 				<tr>

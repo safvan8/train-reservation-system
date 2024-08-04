@@ -81,7 +81,7 @@
 
 	<!-- To display all trains details received from DB -->
 	<div class="main">
-		<p class="menu">All Available running Trains - displaying to Admin
+		<p class="center-heading">All Available running Trains - displaying to Admin
 		</p>
 		<div class="tab">
 			<table border="1">
