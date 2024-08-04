@@ -84,5 +84,24 @@ These technologies are carefully selected to provide a robust, efficient, and us
 
 ## Screenshots
 
-### LoginPage
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+
+### 2-New User Registration Form
+![New User Registration Form](images/2.UserRegistartionForm.png)
+
+### 3- Check All Available Trains By User
+![Check All Available Trains By User](images/3-user-view-apptrains)
+
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+### 1-LoginPage
+![Login Page](images/1.login-page.png)
+### 1-LoginPage
 ![Login Page](images/1.login-page.png)
