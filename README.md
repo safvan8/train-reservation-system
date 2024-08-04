@@ -103,8 +103,9 @@ These technologies are carefully selected to provide a robust, efficient, and us
 ![Booing Suceess](images/6.TicketSucccess.png)
 
 ### 7- Train Booking History and User Profile
-![HistoryProfile](images/7-BokingHistory-And-Profile)
+![HistoryProfile](images/7-BokingHistory-And-Profile.png)
 
-### 8- Admin Add Train View
-![Login Page](images/9-Admin-Features- ad-train- and other.png)
+### 8- Admin Logged In
+![Admin](images/9-admin-loggedIn.png)
 
+### Note: Similar to the user, if an admin registers with the role "ADMIN," they will also have access to all the features mentioned above.
