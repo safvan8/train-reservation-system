@@ -10,7 +10,9 @@ public class TrainNotFoundException extends TrainException {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public TrainNotFoundException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public TrainNotFoundException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
 		super(stackTrace, userFriendlyMessage);
 	}
 }

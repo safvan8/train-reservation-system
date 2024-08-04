@@ -15,5 +15,4 @@ import com.safvan.beans.UserProfile;
  * @since 1.0
  */
 public interface IUserProfileRepository extends CrudRepository<UserProfile, Integer> {
-	// Add custom methods if needed
 }

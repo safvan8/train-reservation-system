@@ -24,7 +24,9 @@ public class ApiUserTicketIdGenerator implements IdentifierGenerator {
 	 * @return The generated unique ticket ID.
 	 */
 	@Override
-	public Serializable generate(SharedSessionContractImplementor session, Object object) {
+	public Serializable generate(
+			SharedSessionContractImplementor session, 
+			Object object) {
 		// Get the current timestamp in milliseconds
 		long timestamp = System.currentTimeMillis();
 

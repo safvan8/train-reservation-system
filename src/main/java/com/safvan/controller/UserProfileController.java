@@ -42,7 +42,9 @@ public class UserProfileController {
 	 * @return The view name for displaying the user profile.
 	 */
 	@GetMapping(UserProfileEndpoints.VIEW_USER_PROFILE)
-	public String showUserProfile(HttpSession session, Map<String, Object> model) {
+	public String showUserProfile(
+			HttpSession session, 
+			Map<String, Object> model) {
 
 		String sessionId = (String) session.getAttribute("sessionId");
 

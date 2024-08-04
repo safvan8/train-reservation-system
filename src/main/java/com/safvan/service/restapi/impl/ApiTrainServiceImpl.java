@@ -38,7 +38,6 @@ public class ApiTrainServiceImpl implements IApiTrainService {
 	 */
 	@Override
 	public List<Train> getAllTrains() {
-		System.out.println("ApiTrainServiceImpl.getAllTrains()");
 		return (List<Train>) trainRepository.findAll();
 	}
 
@@ -52,7 +51,6 @@ public class ApiTrainServiceImpl implements IApiTrainService {
 	@Override
 	public Train getTrainByNumber(Long trainNo) {
 		Optional<Train> train = trainRepository.findById(trainNo);
-		System.out.println("ApiTrainServiceImpl.getTrainByNumber()");
 		if (train.isPresent())
 			return train.get();
 		// throwing execption if train not found

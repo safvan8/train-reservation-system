@@ -16,7 +16,10 @@ public class ApiTrainNotFoundException extends ApiTrainException {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public ApiTrainNotFoundException(StackTraceElement[] stackTrace, String userFriendlyMessage) {
+	public ApiTrainNotFoundException(
+			StackTraceElement[] stackTrace, 
+			String userFriendlyMessage) {
+		
 		super(stackTrace, userFriendlyMessage);
 	}
 }

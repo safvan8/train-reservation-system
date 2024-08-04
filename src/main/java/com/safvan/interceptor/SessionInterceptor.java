@@ -27,9 +27,11 @@ public class SessionInterceptor implements HandlerInterceptor {
 	 * @throws Exception if an exception occurs during the interception process
 	 */
 	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-			throws Exception {
-		System.out.println("SessionInterceptor.preHandle()");
+	public boolean preHandle(
+			HttpServletRequest request, 
+			HttpServletResponse response, 
+			Object handler) throws Exception {
+		
 		HttpSession session = request.getSession(false);
 		if (session == null || session.getAttribute("user") == null) {
 			response.sendRedirect(request.getContextPath() + "/login?sessionExpired=true");

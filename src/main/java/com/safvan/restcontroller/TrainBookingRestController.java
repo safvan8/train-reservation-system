@@ -21,7 +21,8 @@ public class TrainBookingRestController {
 	private IApiBookingService apiBookingService;
 
 	@PostMapping("/confirm")
-	public ResponseEntity<?> confirmTrainTicketBooking(@RequestBody TrainBookingApiRequest trainBookingApiRequest) {
+	public ResponseEntity<?> confirmTrainTicketBooking(
+			@RequestBody TrainBookingApiRequest trainBookingApiRequest) {
 
 		// passing to service for booking
 		ApiTicket apiTicket = apiBookingService.bookApiTicket(trainBookingApiRequest);

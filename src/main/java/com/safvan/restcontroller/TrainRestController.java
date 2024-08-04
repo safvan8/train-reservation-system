@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.safvan.beans.Train;
 import com.safvan.exception.mvc.train.TrainNotFoundException;
+import com.safvan.exception.restapi.train.ApiTrainNotFoundException;
 import com.safvan.service.mvc.ITrainService;
 
 @RestController
@@ -39,7 +40,9 @@ public class TrainRestController {
 	 * @throws ApiTrainNotFoundException If the requested train is not found.
 	 */
 	@GetMapping("/{trainNo}")
-	public ResponseEntity<?> getTrainByNumber(@PathVariable Long trainNo) throws TrainNotFoundException {
+	public ResponseEntity<?> getTrainByNumber(
+			@PathVariable Long trainNo) throws TrainNotFoundException {
+		
 		Train train = trainService.getTrainByNumber(trainNo);
 		return ResponseEntity.ok(train);
 	}
@@ -54,8 +57,10 @@ public class TrainRestController {
 	 *         stations.
 	 */
 	@GetMapping("/between/{source}/{destination}")
-	public ResponseEntity<?> getTrainsBetweenStations(@PathVariable("source") String fromStation,
+	public ResponseEntity<?> getTrainsBetweenStations(
+			@PathVariable("source") String fromStation,
 			@PathVariable("destination") String toStation) {
+		
 		List<Train> trains = trainService.getTrainsBetweenStations(fromStation, toStation);
 		return ResponseEntity.ok(trains);
 	}

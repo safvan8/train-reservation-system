@@ -29,7 +29,9 @@ public interface ILoginManagementService {
 	 * @param sessionId The session ID to be stored.
 	 * @throws ApiUserNotFoundException If the user is not found for the given ID.
 	 */
-	public void storeUserSession(Integer userId, String sessionId) throws UserNotFoundException;
+	public void storeUserSession(
+			Integer userId, 
+			String sessionId) throws UserNotFoundException;
 
 	/**
 	 * Retrieves the user based on the session ID.
@@ -55,5 +57,7 @@ public interface ILoginManagementService {
 	 * @return True if the plain password matches the hashed password, false
 	 *         otherwise.
 	 */
-	public boolean isPasswordHashMatching(String plainPassword, String hashedPassword);
+	public boolean isPasswordHashMatching(
+			String plainPassword, 
+			String hashedPassword);
 }
