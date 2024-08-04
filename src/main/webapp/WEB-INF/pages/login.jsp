@@ -12,46 +12,62 @@
 <title>Document</title>
 
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/UserHome_Css.css">
+	href="${pageContext.request.contextPath}/css/login.css">
 
 </head>
 
 <body>
+	<div class="main-container">
 
-	<h1>National Ticket Booking Spot</h1>
 
-	<div class="main">
-		<span class="menu"> <a href="${pageContext.request.contextPath}/appUsers/register"> Register New
-				User</a>
-		</span>
+		<div class="container">
+			<div class="left-container">
+				<div class="heading">
+					<p class="main-text">National Train</p>
+					<p class="main-text">Ticket</p>
+					<p class="main-text">Booking Spot</p>
+
+				</div>
+				<div class="register-container">
+					<span class="span"> <a class="register"
+						href="${pageContext.request.contextPath}/appUsers/register">
+							Register</a>
+					</span>
+				</div>
+			</div>
+
+
+
+			<%-- Check if logoutMessage is not empty --%>
+			<c:if test="${not empty logoutMessage}">
+				<h3>${logoutMessage}</h3>
+			</c:if>
+
+			<%-- Check if loginFailedMessage is not empty --%>
+			<c:if test="${not empty loginFailedMessage}">
+				<h3>${loginFailedMessage}</h3>
+			</c:if>
+
+			<%-- Check if sessionExpired parameter is present --%>
+			<c:if test="${param.sessionExpired eq 'true'}">
+				<h3>Session Expired, Login again</h3>
+			</c:if>
+
+
+
+			<div class="form-container">
+				<form action="${pageContext.request.contextPath}/login" class="form"
+					method="post">
+					<input type="text" name="username" class="input"
+						placeholder="username"> <input type="password"
+						name="password" placeholder="password" class="input"> <input
+						class="button" type="submit" value="Login">
+
+				</form>
+			</div>
+		</div>
+
 	</div>
-
-	<%-- Check if logoutMessage is not empty --%>
-	<c:if test="${not empty logoutMessage}">
-		<h3>${logoutMessage}</h3>
-	</c:if>
-
-	<%-- Check if loginFailedMessage is not empty --%>
-	<c:if test="${not empty loginFailedMessage}">
-		<h3>${loginFailedMessage}</h3>
-	</c:if>
-
-	<%-- Check if sessionExpired parameter is present --%>
-	<c:if test="${param.sessionExpired eq 'true'}">
-	    <h3>Session Expired, Login again</h3>
-	</c:if>
-	
-	
-
-	<div class="tab green">
-		<form action="${pageContext.request.contextPath}/login"
-			class="tab brown" method="post">
-			Username: <input type="text" name="username"> <br>
-			Password: <input type="password" name="password"> <br> <input
-				type="submit" value="Login">
-		</form>
-	</div>
-
 </body>
 
 </html>
