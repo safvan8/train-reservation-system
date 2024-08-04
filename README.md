@@ -129,7 +129,6 @@ These technologies are carefully selected to provide a robust, efficient, and us
 If you have ideas for new features or improvements, please open an issue or submit a pull request. Whether you're looking to fix bugs, improve documentation, or develop new functionalities, your contributions are highly valued.
 
 ### Suggestions for Improvement:
-- Integrate additional payment gateways
 - Enhance user interface with modern design
 - Implement advanced analytics for ticket booking
 - Add multi-language support
