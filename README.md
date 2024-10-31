@@ -123,6 +123,26 @@ These technologies are carefully selected to provide a robust, efficient, and us
 
 ### Note: Similar to the user, if an admin registers with the role "ADMIN," they will also have access to all the features mentioned above.
 
+Here's the revised instruction, including the "Register New User" button detail for admin access setup:
+
+---
+
+## Setup Instructions
+
+> **Important:**  
+> Before running the application, ensure that:
+> - **Lombok** is installed in your IDE. Missing Lombok can cause compile-time errors, as it generates getters, setters, and constructors. For installation help, search for "Lombok installation in IntelliJ or Eclipse" on YouTube.
+> - The project is imported as a **Maven** project.
+> - Update **database credentials** (username, password, and URL) in the `application.properties` file to match your local setup.
+
+> **Admin Access Setup**  
+> - Start the application and navigate to `http://localhost:9999/TRSApp/`.
+> - Click the **Register New User** button to create a new account.
+> - By default, new users are registered with the role `CUSTOMER`.  
+> - To grant a user admin rights, go to the database and manually update the user’s role to `ADMIN` in `users` table.
+
+
+
 ## Contributing
 
 🚀 **We welcome contributions to enhance this project!** 🚀
