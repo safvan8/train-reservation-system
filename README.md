@@ -136,7 +136,7 @@ Here's the revised instruction, including the "Register New User" button detail 
 > - Update **database credentials** (username, password, and URL) in the `application.properties` file to match your local setup.
 
 > **Admin Access Setup**  
-> - Start the application and navigate to `http://localhost:9999/TRSApp/`.
+> - Start the application and navigate to `http://localhost:9999/TRSApp`.
 > - Click the **Register New User** button to create a new account.
 > - By default, new users are registered with the role `CUSTOMER`.  
 > - To grant a user admin rights, go to the database and manually update the user’s role to `ADMIN` in `users` table.
